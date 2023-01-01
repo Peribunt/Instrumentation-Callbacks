@@ -8,7 +8,7 @@ TestCallback(
 	CHAR Buffer[ 0x200 ]{
 	};
 
-	sprintf_s( Buffer, "Hello from instrumentation callback! Syscall routine ret: %p\n", Context->Rip );
+	sprintf_s( Buffer, "Hello from instrumentation callback! Interrupt return location: %p\n", Context->Rip );
 
 	OutputDebugStringA( Buffer );
 }
